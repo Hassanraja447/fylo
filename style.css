@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Utilities class */
+.u-mb-sm {
+  margin-bottom: 10px;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(243, 100%, 93%);
+  background-color: hsl(229, 57%, 11%);
+  background-image: url("./images/bg-mobile.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  flex: 2;
+  width: 80%;
+  margin: 40px auto;
+}
+.fylo {
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px;
+  border-radius: 10px 80px 10px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.fyloo__list {
+  list-style: none;
+  display: flex;
+  padding: 20px 0;
+}
+.fyloo__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: hsl(229, 57%, 11%);
+  margin-right: 10px;
+}
+.storage {
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+  padding: 40px;
+}
+.storage__gradient {
+  height: 30px;
+  position: relative;
+  background-color: hsla(229, 57%, 11%, 0.226);
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+.storage__gradient > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background-color: hsl(335, 100%, 65%);
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%) 37%,
+    hsl(335, 100%, 65%) 69%
+  );
+  position: relative;
+  overflow: hidden;
+}
+.storage-progess__circle {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+
+  margin-left: auto;
+  margin-top: 2px;
+  margin-right: 2px;
+}
+.storage__gradient-caption {
+  display: flex;
+  justify-content: space-between;
+}
+.storage__popover {
+  position: absolute;
+  bottom: -25%;
+  left: 30%;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+.storage__popover--subset {
+  font-size: 16px;
+  color: hsl(229, 7%, 55%);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.attribution {
+  margin-bottom: 20px;
+  font-size: 11px;
+  text-align: center;
+  padding: 20px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .fylo {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+  .main-content {
+    flex-direction: row;
+    margin-bottom: 10%;
+  }
+  .storage__popover {
+    top: -25%;
+    bottom: auto;
+  }
+}
