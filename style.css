@@ -69,14 +69,17 @@ body {
 .storage__gradient {
   height: 30px;
   position: relative;
+  overflow: hidden;
   background-color: hsla(229, 57%, 11%, 0.226);
   border-radius: 25px;
   padding: 5px;
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
-.storage__gradient > span {
+.storage__gradient span {
   display: block;
   height: 100%;
+}
+.progress {
   border-radius: 20px;
   background-color: hsl(335, 100%, 65%);
   background-image: linear-gradient(
@@ -84,8 +87,8 @@ body {
     hsl(6, 100%, 80%) 37%,
     hsl(335, 100%, 65%) 69%
   );
-  position: relative;
-  overflow: hidden;
+  animation: fill-bar 3s ease-in-out;
+  animation-fill-mode: both;
 }
 .storage-progess__circle {
   display: block;
@@ -148,5 +151,16 @@ body {
   .storage__popover {
     top: -25%;
     bottom: auto;
+  }
+}
+
+/* Animation */
+
+@keyframes fill-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
